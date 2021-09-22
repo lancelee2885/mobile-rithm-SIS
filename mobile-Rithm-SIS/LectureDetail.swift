@@ -14,7 +14,7 @@ struct LectureDetail: View {
         VStack {
             Text(lecture.title)
             Text(lecture.description)
-            Text(lecture.staff)
+//            Text(lecture.staff[0])
         }
     }
 }

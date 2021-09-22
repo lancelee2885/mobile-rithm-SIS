@@ -6,24 +6,52 @@
 //
 
 import SwiftUI
+import Foundation
+
 
 struct Upcoming: View {
     @State var lectureSessions: [LectureInstance] = []
-    @State var exerciseSessions: [ExerciseInstance] = []
     @State var lectures: [Lecture] = []
     @State var lectureLinks: [String] = []
+    @State var exerciseSessions: [ExerciseInstance] = []
+    @State var exerciseLinks: [String] = []
+    @State var exercises: [Exercise] = []
+    
     
     var body: some View {
         
         VStack {
             NavigationView {
-                List(lectures) { lecture in
-                    NavigationLink(destination: LectureDetail(lecture: lecture)) {
-                        Text(lecture.title)
-                    }
-                }
                 
-                .onAppear {
+                List {
+                    Section(header: Text("Exercise")) {
+                        ForEach(exercises) { exercise in
+                            Text(exercise.title)
+                        }
+                    }
+                    Section(header: Text("Lecture")) {
+                        ForEach(lectures) { lecture in
+                            NavigationLink(destination: LectureDetail(lecture: lecture)) {
+                                VStack(alignment: .leading) {
+                                    Text(lecture.title).font(.title3)
+                                    Text("\(Helper.formatDate(date: lecture.start_at))")
+                                }
+                                
+                            }
+                        }
+                    }
+                    
+                    
+                   
+                }.onAppear {
+                    lectureSessions = []
+                    exerciseSessions = []
+                    lectures = []
+                    lectureLinks = []
+                    exercises = []
+                    exerciseLinks = []
+                    
+                    
                     LectureApi().getLectures { lectureResponse in
                         self.lectureSessions = lectureResponse.results
                         for result in lectureSessions {
@@ -35,25 +63,21 @@ struct Upcoming: View {
                             }
                         }
                     }
+                    
+                    ExerciseApi().getExercises { exerciseResponse in
+                        self.exerciseSessions = exerciseResponse.results
+                        for result in exerciseSessions {
+                            self.exerciseLinks.append(result.api_url)
+                        }
+                        for exerciseLink in Array(exerciseLinks.prefix(3)) {
+                            UpcomingExercisesApi().getExercise(exerciseURL: exerciseLink) { e in
+                                self.exercises.append(e)
+                            }
+                        }
+                    }
                 }
-                .navigationTitle("Lecture Links")
+                .navigationTitle("Upcoming")
             }
-            
-    
-//            NavigationView {
-//                List(lectures) { lecture in
-//                    Text(lecture.title)
-//                }
-//                .onAppear {
-//                    for lectureLink in Array(lectureLinks.prefix(3)) {
-//                        UpcomingLecturesApi().getLecture(lectureURL: lectureLink) { l in
-//                            self.lectures.append(l)
-//                        }
-//                    }
-//
-//                }.navigationTitle("Lectures")
-                
-//            }
         }
     }
     
