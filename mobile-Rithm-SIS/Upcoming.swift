@@ -26,15 +26,27 @@ struct Upcoming: View {
                 List {
                     Section(header: Text("Exercise")) {
                         ForEach(exercises) { exercise in
-                            Text(exercise.title)
+                            NavigationLink(destination: ExerciseDetail(exercise: exercise)) {
+                                VStack(alignment: .leading) {
+                                    Text(exercise.title)
+//                                    .font(.title3)
+                                    Text("\(Helper.formatDate(input: exercise.exerciselabsession_set[0].start_at)) - \(Helper.formatDate(input: exercise.exerciselabsession_set.last!.end_at))")
+                                        .font(.system(size:12))
+                                        .foregroundColor(.gray)
+                                }
+                                
+                            }
                         }
                     }
                     Section(header: Text("Lecture")) {
                         ForEach(lectures) { lecture in
                             NavigationLink(destination: LectureDetail(lecture: lecture)) {
                                 VStack(alignment: .leading) {
-                                    Text(lecture.title).font(.title3)
-                                    Text("\(Helper.formatDate(date: lecture.start_at))")
+                                    Text(lecture.title)
+//                                    .font(.title3)
+                                    Text("\(Helper.formatDate(input: lecture.start_at)) - \(Helper.formatDate(input: lecture.end_at))")
+                                        .font(.system(size:12))
+                                        .foregroundColor(.gray)
                                 }
                                 
                             }

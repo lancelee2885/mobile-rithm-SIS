@@ -8,13 +8,17 @@
 import Foundation
 
 class Helper {
-    static func formatDate (date: String) -> Date! {
+    static func formatDate (input: String) -> String! {
 
-        let dateFormatter = ISO8601DateFormatter()
-        dateFormatter.formatOptions = [.withInternetDateTime]
-        
-        return dateFormatter.date(from: date)
-
+        let dateFormatter = DateFormatter()
+//        dateFormatter.formatOptions = [.withTime]
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        if let date = dateFormatter.date(from: input) {
+            let displayFormatter = DateFormatter()
+            displayFormatter.dateFormat = "MM-dd hh:mm a"
+            return displayFormatter.string(from: date)
+        }
+        else { return "" }
     }
 }
 
