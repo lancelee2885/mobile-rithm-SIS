@@ -19,6 +19,9 @@ struct LectureInstance: Codable, Identifiable {
 }
 
 class LectureApi {
+//    @Published var lectureResponse: LectureList?
+//    @Published var lectureSessions = [LectureInstance]()
+
     func getLectures(completion: @escaping (LectureList) -> ()) {
         guard let url = URL(string: "https://r22.students.rithmschool.com/api/lecturesessions/") else { return }
         
@@ -29,10 +32,10 @@ class LectureApi {
                          , forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: request) { data, response, error in
-            let lectures = try! JSONDecoder().decode(LectureList.self, from: data!)
+            let lectureResponse = try! JSONDecoder().decode(LectureList.self, from: data!)
 
             DispatchQueue.main.async {
-                completion(lectures)
+                completion(lectureResponse)
             }
         }
         .resume()

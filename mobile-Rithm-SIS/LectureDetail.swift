@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LectureDetail: View {
+    
     var lecture: Lecture
     
     var body: some View {
@@ -18,9 +19,10 @@ struct LectureDetail: View {
         }
     }
 }
-//
+
 //struct LectureDetail_Previews: PreviewProvider {
+//    @StateObject var lectures = Lectures()
 //    static var previews: some View {
-//        LectureDetail(self.lecture = lectures[0])
+//        LectureDetail(lecture: lectures.lectures[0])
 //    }
 //}

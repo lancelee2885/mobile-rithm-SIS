@@ -20,6 +20,9 @@
 		0AC8AD5C26FBBB310042E29F /* ExerciseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8AD5B26FBBB310042E29F /* ExerciseDetail.swift */; };
 		7E8EF04426FB9B9B007F28D7 /* ExerciseInstanceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EF04326FB9B9B007F28D7 /* ExerciseInstanceData.swift */; };
 		7E8EF04626FBA58C007F28D7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EF04526FBA58C007F28D7 /* Helper.swift */; };
+		7E8EF04826FBCEAF007F28D7 /* EventInstanceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EF04726FBCEAF007F28D7 /* EventInstanceData.swift */; };
+		7E8EF04A26FBCF37007F28D7 /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EF04926FBCF37007F28D7 /* EventDetail.swift */; };
+		7E8EF04C26FBD306007F28D7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EF04B26FBD306007F28D7 /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		0AC8AD5B26FBBB310042E29F /* ExerciseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetail.swift; sourceTree = "<group>"; };
 		7E8EF04326FB9B9B007F28D7 /* ExerciseInstanceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInstanceData.swift; sourceTree = "<group>"; };
 		7E8EF04526FBA58C007F28D7 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		7E8EF04726FBCEAF007F28D7 /* EventInstanceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInstanceData.swift; sourceTree = "<group>"; };
+		7E8EF04926FBCF37007F28D7 /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
+		7E8EF04B26FBD306007F28D7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +84,10 @@
 				7E8EF04326FB9B9B007F28D7 /* ExerciseInstanceData.swift */,
 				0AC8AD5B26FBBB310042E29F /* ExerciseDetail.swift */,
 				0AC8AD5726FB97730042E29F /* EventData.swift */,
+				7E8EF04726FBCEAF007F28D7 /* EventInstanceData.swift */,
+				7E8EF04926FBCF37007F28D7 /* EventDetail.swift */,
 				0AC8AD4F26FB96D40042E29F /* Upcoming.swift */,
+				7E8EF04B26FBD306007F28D7 /* DataSource.swift */,
 				7E8EF04526FBA58C007F28D7 /* Helper.swift */,
 				0AC8AD4526FB96860042E29F /* Assets.xcassets */,
 				0AC8AD4726FB96860042E29F /* Preview Content */,
@@ -164,13 +173,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8EF04C26FBD306007F28D7 /* DataSource.swift in Sources */,
 				0AC8AD5426FB97370042E29F /* ExerciseData.swift in Sources */,
+				7E8EF04A26FBCF37007F28D7 /* EventDetail.swift in Sources */,
 				0AC8AD4426FB96820042E29F /* ContentView.swift in Sources */,
 				0AC8AD5826FB97730042E29F /* EventData.swift in Sources */,
 				0AC8AD5626FB97550042E29F /* LectureData.swift in Sources */,
 				0AC8AD4226FB96820042E29F /* mobile_Rithm_SISApp.swift in Sources */,
 				0AC8AD5A26FB979C0042E29F /* LectureDetail.swift in Sources */,
 				0AC8AD5026FB96D40042E29F /* Upcoming.swift in Sources */,
+				7E8EF04826FBCEAF007F28D7 /* EventInstanceData.swift in Sources */,
 				7E8EF04626FBA58C007F28D7 /* Helper.swift in Sources */,
 				0AC8AD5226FB970D0042E29F /* LectureInstanceData.swift in Sources */,
 				0AC8AD5C26FBBB310042E29F /* ExerciseDetail.swift in Sources */,

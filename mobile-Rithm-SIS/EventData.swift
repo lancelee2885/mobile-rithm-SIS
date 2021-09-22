@@ -19,7 +19,7 @@ struct EventInstance: Codable, Identifiable {
 }
 
 class EventApi {
-    func getExercises(completion: @escaping (EventList) -> ()) {
+    func getEvents(completion: @escaping (EventList) -> ()) {
         guard let url = URL(string: "https://r22.students.rithmschool.com/api/events/") else { return }
         
         var request = URLRequest(url: url)

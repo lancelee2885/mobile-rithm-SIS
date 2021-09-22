@@ -10,13 +10,15 @@ import Foundation
 
 
 struct Upcoming: View {
-    @State var lectureSessions: [LectureInstance] = []
-    @State var lectures: [Lecture] = []
-    @State var lectureLinks: [String] = []
+    @State var lectureSessions = [LectureInstance]()
+    @State var lectures = [Lecture]()
+    @State var lectureLinks = [String]()
     @State var exerciseSessions: [ExerciseInstance] = []
     @State var exerciseLinks: [String] = []
     @State var exercises: [Exercise] = []
-    
+    @State var eventSessions: [EventInstance] = []
+    @State var eventLinks: [String] = []
+    @State var events: [Event] = []
     
     var body: some View {
         
@@ -24,26 +26,13 @@ struct Upcoming: View {
             NavigationView {
                 
                 List {
-                    Section(header: Text("Exercise")) {
-                        ForEach(exercises) { exercise in
-                            NavigationLink(destination: ExerciseDetail(exercise: exercise)) {
-                                VStack(alignment: .leading) {
-                                    Text(exercise.title)
-//                                    .font(.title3)
-                                    Text("\(Helper.formatDate(input: exercise.exerciselabsession_set[0].start_at)) - \(Helper.formatDate(input: exercise.exerciselabsession_set.last!.end_at))")
-                                        .font(.system(size:12))
-                                        .foregroundColor(.gray)
-                                }
-                                
-                            }
-                        }
-                    }
-                    Section(header: Text("Lecture")) {
+                    
+                    Section(header: Text("Lectures")) {
                         ForEach(lectures) { lecture in
                             NavigationLink(destination: LectureDetail(lecture: lecture)) {
                                 VStack(alignment: .leading) {
                                     Text(lecture.title)
-//                                    .font(.title3)
+
                                     Text("\(Helper.formatDate(input: lecture.start_at)) - \(Helper.formatDate(input: lecture.end_at))")
                                         .font(.system(size:12))
                                         .foregroundColor(.gray)
@@ -53,15 +42,46 @@ struct Upcoming: View {
                         }
                     }
                     
+                    Section(header: Text("Exercises")) {
+                        ForEach(exercises) { exercise in
+                            NavigationLink(destination: ExerciseDetail(exercise: exercise)) {
+                                VStack(alignment: .leading) {
+                                    Text(exercise.title)
+
+                                    Text("\(Helper.formatDate(input: exercise.exerciselabsession_set[0].start_at)) - \(Helper.formatDate(input: exercise.exerciselabsession_set.last!.end_at))")
+                                        .font(.system(size:12))
+                                        .foregroundColor(.gray)
+                                }
+                                
+                            }
+                        }
+                    }
                     
-                   
+                    Section(header: Text("Events")) {
+                        ForEach(events) { event in
+                            NavigationLink(destination: EventDetail(event: event)) {
+                                VStack(alignment: .leading) {
+                                    Text(event.title)
+
+                                    Text("\(Helper.formatDate(input: event.start_at)) - \(Helper.formatDate(input: event.end_at))")
+                                        .font(.system(size:12))
+                                        .foregroundColor(.gray)
+                                }
+                                
+                            }
+                        }
+                    }
+                    
                 }.onAppear {
                     lectureSessions = []
-                    exerciseSessions = []
                     lectures = []
                     lectureLinks = []
+                    exerciseSessions = []
                     exercises = []
                     exerciseLinks = []
+                    eventSessions = []
+                    events = []
+                    eventLinks = []
                     
                     
                     LectureApi().getLectures { lectureResponse in
@@ -87,6 +107,18 @@ struct Upcoming: View {
                             }
                         }
                     }
+                    
+                    EventApi().getEvents { eventResponse in
+                        self.eventSessions = eventResponse.results
+                        for result in eventSessions {
+                            self.eventLinks.append(result.api_url)
+                        }
+                        for eventLink in Array(eventLinks.prefix(3)) {
+                            UpcomingEventsApi().getEvent(eventURL: eventLink) { e in
+                                self.events.append(e)
+                            }
+                        }
+                    }
                 }
                 .navigationTitle("Upcoming")
             }
@@ -96,7 +128,7 @@ struct Upcoming: View {
     struct Upcoming_Previews: PreviewProvider {
         static var previews: some View {
             Upcoming()
-                .previewDevice("iPhone 13 Pro")
+                .previewDevice("iPhone 13 Pro Max")
         }
     }
 }

@@ -11,7 +11,6 @@ class Helper {
     static func formatDate (input: String) -> String! {
 
         let dateFormatter = DateFormatter()
-//        dateFormatter.formatOptions = [.withTime]
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         if let date = dateFormatter.date(from: input) {
             let displayFormatter = DateFormatter()
