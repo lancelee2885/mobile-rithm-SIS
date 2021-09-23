@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "nate-07ab739f67f8a0c04eb4f66e34337b7d5dca1267c7213afad8d2390c0d93fa70.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
