@@ -37,7 +37,8 @@ struct Upcoming: View {
             VStack {
                 NavigationView {
                     List {
-                        Section(header: Text("Lectures")) {
+                        Section(header: Text("Lectures")
+                                    .font(Font.custom("SourceSerifPro-Regular", size: 14))) {
                             ForEach(lectures) { lecture in
                                 NavigationLink(destination: LectureDetail(lecture: lecture)) {
                                     VStack(alignment: .leading) {

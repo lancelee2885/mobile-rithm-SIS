@@ -19,7 +19,7 @@ struct EventDetail: View {
                 
                 Divider()
                 Text("\(Helper.formatDate(input: event.start_at)) - \(Helper.formatDate(input: event.end_at))")
-                    .font(.title2)
+                    .font(.title3)
                     .foregroundColor(.gray)
                 Spacer().frame(height: 60)
                 Text(event.description)
@@ -27,7 +27,8 @@ struct EventDetail: View {
                     .font(.title2)
                     .padding(.horizontal, 7.0)
                 Spacer().frame(height: 60)
-                Text("Staffs: ")
+                Text("Staff: ")
+                    .font(.title3)
                 HStack {
                     ForEach(event.staff, id: \.self) { staffLink in
                         CircleImage(image: Image( staffLink.components(separatedBy: "/")[5])

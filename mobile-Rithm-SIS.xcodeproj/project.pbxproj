@@ -28,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AB927EE26FD042600DEFD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0AC8AD3E26FB96820042E29F /* mobile-Rithm-SIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-Rithm-SIS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC8AD4126FB96820042E29F /* mobile_Rithm_SISApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_Rithm_SISApp.swift; sourceTree = "<group>"; };
 		0AC8AD4326FB96820042E29F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		0AC8AD4026FB96820042E29F /* mobile-Rithm-SIS */ = {
 			isa = PBXGroup;
 			children = (
+				0AB927EE26FD042600DEFD00 /* Info.plist */,
 				0AC8AD4126FB96820042E29F /* mobile_Rithm_SISApp.swift */,
 				0AC8AD4326FB96820042E29F /* ContentView.swift */,
 				0AC8AD5526FB97550042E29F /* LectureData.swift */,
@@ -328,6 +330,7 @@
 				DEVELOPMENT_TEAM = MD3ZX3N8E5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mobile-Rithm-SIS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -358,6 +361,7 @@
 				DEVELOPMENT_TEAM = MD3ZX3N8E5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mobile-Rithm-SIS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

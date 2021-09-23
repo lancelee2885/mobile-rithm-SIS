@@ -18,13 +18,14 @@ struct LectureDetail: View {
                 
                 Divider()
                 Text("\(Helper.formatDate(input: lecture.start_at)) - \(Helper.formatDate(input: lecture.end_at))")
-                    .font(.title2)
+                    .font(.title3)
                     .foregroundColor(.gray)
                 Spacer().frame(height: 60)
                 Text(lecture.description)
                     .font(.title2)
                 Spacer().frame(height: 60)
-                Text("Staffs: ")
+                Text("Staff: ")
+                    .font(.title3)
                 HStack {
                     ForEach(lecture.staff, id: \.self) { staffLink in
                         CircleImage(image: Image( staffLink.components(separatedBy: "/")[5])

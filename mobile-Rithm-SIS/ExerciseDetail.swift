@@ -18,14 +18,15 @@ struct ExerciseDetail: View {
                 
                 Divider()
                 Text("\(Helper.formatDate(input: exercise.exerciselabsession_set[0].start_at)) - \(Helper.formatDate(input: exercise.exerciselabsession_set.last!.end_at))")
-                    .font(.title2)
+                    .font(.title3)
                     .foregroundColor(.gray)
                 Spacer().frame(height: 60)
                 Text(exercise.description)
                     .font(.title2)
                     .padding(.horizontal, 7.0)
                 Spacer().frame(height: 60)
-                Text("Staffs: ")
+                Text("Staff: ")
+                    .font(.title3)
                 HStack {
                     ForEach(exercise.exerciselabsession_set[0].staff, id: \.self) { staffLink in
                         CircleImage(image: Image( staffLink.components(separatedBy: "/")[5])
