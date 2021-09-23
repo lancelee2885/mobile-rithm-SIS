@@ -23,6 +23,8 @@
 		7E8EF04826FBCEAF007F28D7 /* EventInstanceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EF04726FBCEAF007F28D7 /* EventInstanceData.swift */; };
 		7E8EF04A26FBCF37007F28D7 /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EF04926FBCF37007F28D7 /* EventDetail.swift */; };
 		7E8EF04C26FBD306007F28D7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EF04B26FBD306007F28D7 /* DataSource.swift */; };
+		7E99151226FCEE4D001F5060 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E99151126FCEE4D001F5060 /* CircleImage.swift */; };
+		7E99151426FCFB7D001F5060 /* SourceSerifPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E99151326FCFB7D001F5060 /* SourceSerifPro-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		7E8EF04726FBCEAF007F28D7 /* EventInstanceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInstanceData.swift; sourceTree = "<group>"; };
 		7E8EF04926FBCF37007F28D7 /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
 		7E8EF04B26FBD306007F28D7 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		7E99151126FCEE4D001F5060 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		7E99151326FCFB7D001F5060 /* SourceSerifPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSerifPro-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				7E8EF04726FBCEAF007F28D7 /* EventInstanceData.swift */,
 				7E8EF04926FBCF37007F28D7 /* EventDetail.swift */,
 				0AC8AD4F26FB96D40042E29F /* Upcoming.swift */,
+				7E99151326FCFB7D001F5060 /* SourceSerifPro-Regular.ttf */,
+				7E99151126FCEE4D001F5060 /* CircleImage.swift */,
 				7E8EF04B26FBD306007F28D7 /* DataSource.swift */,
 				7E8EF04526FBA58C007F28D7 /* Helper.swift */,
 				0AC8AD4526FB96860042E29F /* Assets.xcassets */,
@@ -161,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E99151426FCFB7D001F5060 /* SourceSerifPro-Regular.ttf in Resources */,
 				0AC8AD4926FB96860042E29F /* Preview Assets.xcassets in Resources */,
 				0AC8AD4626FB96860042E29F /* Assets.xcassets in Resources */,
 			);
@@ -187,6 +194,7 @@
 				0AC8AD5226FB970D0042E29F /* LectureInstanceData.swift in Sources */,
 				0AC8AD5C26FBBB310042E29F /* ExerciseDetail.swift in Sources */,
 				7E8EF04426FB9B9B007F28D7 /* ExerciseInstanceData.swift in Sources */,
+				7E99151226FCEE4D001F5060 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobile-Rithm-SIS/Preview Content\"";
+				DEVELOPMENT_TEAM = MD3ZX3N8E5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -346,6 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobile-Rithm-SIS/Preview Content\"";
+				DEVELOPMENT_TEAM = MD3ZX3N8E5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

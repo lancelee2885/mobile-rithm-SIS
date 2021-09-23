@@ -11,10 +11,29 @@ struct ExerciseDetail: View {
     var exercise: Exercise
     
     var body: some View {
-        VStack {
-            Text(exercise.title)
-            Text(exercise.description)
-//            Text(lecture.staff[0])
+        ScrollView {
+            VStack(alignment: .center) {
+                Text(exercise.title)
+                    .font(.title)
+                
+                Divider()
+                Text("\(Helper.formatDate(input: exercise.exerciselabsession_set[0].start_at)) - \(Helper.formatDate(input: exercise.exerciselabsession_set.last!.end_at))")
+                    .font(.title2)
+                    .foregroundColor(.gray)
+                Spacer().frame(height: 60)
+                Text(exercise.description)
+                    .font(.title2)
+                    .padding(.horizontal, 7.0)
+                Spacer().frame(height: 60)
+                Text("Staffs: ")
+                HStack {
+                    ForEach(exercise.exerciselabsession_set[0].staff, id: \.self) { staffLink in
+                        CircleImage(image: Image( staffLink.components(separatedBy: "/")[5])
+                        )
+                            .padding(10)
+                    }
+                }
+            }
         }
     }
 }
