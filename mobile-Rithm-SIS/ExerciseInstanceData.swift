@@ -7,24 +7,24 @@
 
 import SwiftUI
 
-struct Exercise: Codable, Identifiable {
-
-    let id = UUID()
-    var title: String
-    var description: String
-    var exerciselabsession_set: [ExerciseLabSession]
-    var asset_set: [String]
-
-}
-
-struct ExerciseLabSession: Codable, Identifiable {
-    
-    let id = UUID()
-    var start_at: String
-    var end_at: String
-    var staff: [String]
-    
-}
+//struct Exercise: Codable, Identifiable {
+//
+//    let id = UUID()
+//    var title: String
+//    var description: String
+//    var exerciselabsession_set: [ExerciseLabSession]
+//    var asset_set: [String]
+//
+//}
+//
+//struct ExerciseLabSession: Codable, Identifiable {
+//    
+//    let id = UUID()
+//    var start_at: String
+//    var end_at: String
+//    var staff: [String]
+//    
+//}
 
 class UpcomingExercisesApi {
     func getExercise(exerciseURL: String, completion: @escaping (Exercise) -> ()) {

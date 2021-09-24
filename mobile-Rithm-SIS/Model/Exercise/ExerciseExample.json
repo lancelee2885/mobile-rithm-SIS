@@ -1,0 +1,28 @@
+
+{
+    "id": 1479,
+    "title": "AJAX: Giphy Party",
+    "description": "Using the Giphy API and AJAX to display fun GIFs",
+    "exercise": "ajax-giphy-party",
+    "cohort": "http://r22.students.rithmschool.com/api/cohorts/r22/",
+    "dri": "http://r22.students.rithmschool.com/api/staff/tim/",
+    "week_group": "Intermediate web development",
+    "status": "published",
+    "api_url": "http://r22.students.rithmschool.com/api/exercisesessions/1479/",
+    "asset_set": [
+        "http://r22.students.rithmschool.com/api/assets/7fa62b2c-819f-46c2-b575-d43f1029f1d4/",
+        "http://r22.students.rithmschool.com/api/assets/81360106-d357-41c4-b072-96265d63d373/"
+    ],
+    "exerciselabsession_set": [
+        {
+            "start_at": "2021-06-29T15:15:00-07:00",
+            "end_at": "2021-06-29T17:15:00-07:00",
+            "dri": "http://r22.students.rithmschool.com/api/staff/tim/",
+            "staff": [
+                "http://r22.students.rithmschool.com/api/staff/brit/",
+                "http://r22.students.rithmschool.com/api/staff/tim/",
+                "http://r22.students.rithmschool.com/api/staff/nate/"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+
+{
+"id": 584,
+"slug": "social-w2",
+"title": "Social time and games",
+"description": "",
+"cohort": "http://r22.students.rithmschool.com/api/cohorts/r22/",
+"dri": "http://r22.students.rithmschool.com/api/staff/brit/",
+"start_at": "2021-07-02T17:00:00-07:00",
+"end_at": "2021-07-02T18:00:00-07:00",
+"staff": [
+"http://r22.students.rithmschool.com/api/staff/brit/",
+"http://r22.students.rithmschool.com/api/staff/nate/",
+"http://r22.students.rithmschool.com/api/staff/joel/"
+],
+"location": "",
+"week_group": "Intermediate web development",
+"status": "published",
+"api_url": "http://r22.students.rithmschool.com/api/events/584/",
+"asset_set": []
+}

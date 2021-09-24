@@ -23,9 +23,8 @@ struct EventDetail: View {
                     .foregroundColor(.gray)
                 Spacer().frame(height: 60)
                 Text(event.description)
-                    .font(Font.custom("Source-Serif", size: 20))
                     .font(.title2)
-                    .padding(.horizontal, 7.0)
+                    .padding(.horizontal, 30.0)
                 Spacer().frame(height: 60)
                 Text("Staff: ")
                     .font(.title3)
@@ -42,9 +41,9 @@ struct EventDetail: View {
         
     }
 }
-//
-//struct EventDetail_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LectureDetail(event: )
-//    }
-//}
+
+struct EventDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        EventDetail(event: eventExample)
+    }
+}

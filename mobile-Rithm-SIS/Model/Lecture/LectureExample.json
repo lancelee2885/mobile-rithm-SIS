@@ -1,0 +1,22 @@
+{
+    "id": 2356,
+    "lecture": "ajax",
+    "title": "AJAX",
+    "description": "Making web requests in the browser using JavaScript.",
+    "cohort": "http://r22.students.rithmschool.com/api/cohorts/r22/",
+    "dri": "http://r22.students.rithmschool.com/api/staff/tim/",
+    "staff": [
+        "http://r22.students.rithmschool.com/api/staff/tim/"
+    ],
+    "week_group": "Intermediate web development",
+    "start_at": "2021-06-29T13:30:00-07:00",
+    "end_at": "2021-06-29T15:15:00-07:00",
+    "asset_set": [
+        "http://r22.students.rithmschool.com/api/assets/fc2e403f-a04c-44a1-bf35-cd4f045c07d5/",
+        "http://r22.students.rithmschool.com/api/assets/b328e722-cab8-4898-aeb2-d74d4cf178f5/",
+        "http://r22.students.rithmschool.com/api/assets/62cb4b20-a99d-4f9f-97d7-a4a0158f1121/",
+        "http://r22.students.rithmschool.com/api/assets/fd8d5517-5fa8-4bef-995a-77827dc654d6/"
+    ],
+    "status": "published",
+    "api_url": "http://r22.students.rithmschool.com/api/lecturesessions/2356/"
+}
