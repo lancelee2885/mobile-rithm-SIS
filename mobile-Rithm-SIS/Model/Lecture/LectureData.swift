@@ -1,9 +1,3 @@
-//
-//  LectureData.swift
-//  mobile-Rithm-SIS
-//
-//  Created by Alex  Rutan on 9/22/21.
-//
 
 import SwiftUI
 import Alamofire
