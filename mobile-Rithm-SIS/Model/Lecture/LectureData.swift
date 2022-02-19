@@ -41,7 +41,7 @@ class LectureApi: ObservableObject {
         guard let url = URL(string: "https://r22.students.rithmschool.com/api/lecturesessions/") else { return }
         
         AF.request(url, headers: [
-            "Authorization": "Token 5fb3d95a5a1980f112918e03be474e70da961175",
+            "Authorization": "Token Hidden",
             "Accept": "application/json"
         ]).responseJSON { response in
             guard let data = response.data else {return}
@@ -58,7 +58,7 @@ class LectureApi: ObservableObject {
             
             for link in self.lectureLinks {
                 AF.request("https" + link.dropFirst(4), headers: [
-                            "Authorization": "Token 5fb3d95a5a1980f112918e03be474e70da961175",
+                            "Authorization": "Token Hidden",
                             "Accept": "application/json"
                         ]).responseJSON { response in
                             guard let data = response.data else {return}
